@@ -756,12 +756,13 @@ button {
 }
 .flow-steps {
   display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
   gap: 8px;
   margin-top: 22px;
 }
 .flow-step {
+  position: relative;
   display: flex;
   min-width: 0;
   flex-direction: column;
@@ -784,7 +785,9 @@ button {
   background: var(--lime);
 }
 .flow-arrow {
-  margin-bottom: 17px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
   color: #a3998d;
 }
 .idea-note {
@@ -805,23 +808,38 @@ button {
 }
 .idea-dots {
   display: flex;
-  gap: 7px;
+  gap: 2px;
 }
 .idea-dot {
-  width: 8px;
-  height: 8px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
   padding: 0;
   border: 0;
   border-radius: 99px;
-  background: #d2ccc2;
+  background: transparent;
   cursor: pointer;
+}
+.idea-dot::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: #d2ccc2;
   transition:
     background 0.2s ease,
     width 0.2s ease;
 }
-.idea-dot.active {
+.idea-dot.active::after {
   width: 22px;
   background: #a8654f;
+}
+.project-attribution {
+  margin: 12px 0 0;
+  color: #898278;
+  font-size: 9px;
+  line-height: 1.7;
 }
 
 .lab-section {

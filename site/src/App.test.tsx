@@ -37,6 +37,9 @@ describe("Qarma Labs company website", () => {
       screen.getByRole("link", { name: /explore qm on github/i }),
     ).toHaveAttribute("href", "https://github.com/Qarma-Labs/harness1");
     expect(
+      screen.getByText(/public fork of the open-source QM project/i),
+    ).toBeInTheDocument();
+    expect(
       screen
         .getAllByRole("link", { name: /^GitHub/ })
         .every(

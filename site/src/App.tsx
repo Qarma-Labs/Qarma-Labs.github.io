@@ -439,15 +439,15 @@ export default function App() {
             <div className="section-heading reveal">
               <div>
                 <p className="eyebrow">
-                  A LITTLE OF WHAT WE&apos;RE BUILDING <span>·</span> 04
+                  A LOOK INSIDE THE OPEN-SOURCE LAB <span>·</span> 04
                 </p>
                 <h2 id="lab-title">
                   Ideas, <em>in the open.</em>
                 </h2>
               </div>
               <p className="section-intro">
-                A peek into the lab: experiments and tools shared with the wider
-                developer community.
+                Tools and experiments we&apos;re exploring in the Qarma Labs
+                public GitHub organization.
               </p>
             </div>
             <article className="project-card reveal">
@@ -470,13 +470,16 @@ export default function App() {
               </div>
               <div className="project-copy">
                 <p className="eyebrow">
-                  <span className="tiny-live" /> FROM THE OPEN-SOURCE LAB
+                  <span className="tiny-live" /> PUBLIC REPOSITORY / FORK
                 </p>
                 <h3>QM</h3>
                 <p className="project-description">
                   A multiplayer agent harness for work. In Slack and on the web,
                   people can work independently and collaborate with an agent in
                   shared channels and projects.
+                </p>
+                <p className="project-attribution">
+                  Qarma Labs&apos; public fork of the open-source QM project.
                 </p>
                 <div className="project-tags">
                   <span>AI agents</span>
