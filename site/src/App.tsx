@@ -211,6 +211,7 @@ export default function App() {
 
   useEffect(() => {
     if (typeof IntersectionObserver === "undefined") return;
+    document.documentElement.classList.add("js");
     const observer = new IntersectionObserver(
       (entries) => entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -221,7 +222,10 @@ export default function App() {
       { threshold: 0.12 },
     );
     document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      document.documentElement.classList.remove("js");
+    };
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
